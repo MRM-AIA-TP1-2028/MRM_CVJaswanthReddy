@@ -1,0 +1,52 @@
+#include <iostream>
+#include <vector>
+using namespace std;
+
+//DO NOT EDIT/////////////////
+class VectorAddThree {
+  public:
+    vector<int> Add() {
+      nums.push_back(num1);
+      nums.push_back(num2);
+      nums.push_back(num3);
+      return nums;
+    }
+
+  protected:
+    int num1 = 1;
+    int num2 = 2;
+    int num3 = 3;
+
+  private:
+    vector<int> nums;
+};
+
+//add class definitions below this line
+
+class VectorAddSix : public VectorAddThree {
+  public:
+    vector<int> Add() {
+      vector<int> nums;
+
+      nums.push_back(num1);
+      nums.push_back(num2);
+      nums.push_back(num3);
+      nums.push_back(4);
+      nums.push_back(5);
+      nums.push_back(6);
+
+      return nums;
+    }
+};
+
+//add class definitions above this line
+
+int main() {
+  VectorAddSix v6;
+
+  for (int i : v6.Add()) {
+    cout << i << endl;
+  }
+
+  return 0;
+}
